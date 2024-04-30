@@ -484,9 +484,9 @@
                                     <label for="signin-password" class="form-label text-default block">Password<a href="reset-password-basic.html" class="ltr:float-right rtl:float-left text-danger">Forget password ?</a></label>
                                     <div class="input-group">
                                         <input type="password" class="form-control form-control-lg !rounded-s-md" id="password" name="password" placeholder="password">
-                                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                         <button aria-label="button" class="ti-btn ti-btn-light !rounded-s-none !mb-0" type="button" onclick="createpassword('signin-password',this)" id="button-addon2"><i class="ri-eye-off-line align-middle"></i></button>
                                     </div>
+                                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                     <div class="mt-2">
                                         <div class="form-check !ps-0">
                                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
