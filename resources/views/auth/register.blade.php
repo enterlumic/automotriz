@@ -361,7 +361,7 @@
                                     <div class="grid grid-cols-12 gap-y-4">
                                         <div class="xl:col-span-12 col-span-12">
                                             <label for="signup-firstname" class="form-label text-default">First Name</label>
-                                            <input type="text" class="form-control form-control-lg w-full !rounded-md" id="signup-firstname" placeholder="first name">
+                                            <input type="text" class="form-control form-control-lg w-full !rounded-md" name="name" id="name"  placeholder="first name">
                                             <x-input-error :messages="$errors->get('name')" class="mt-2" />
                                         </div>
                                         <div class="xl:col-span-12 col-span-12">
@@ -376,19 +376,19 @@
                                         <div class="xl:col-span-12 col-span-12">
                                             <label for="signup-password" class="form-label text-default">Password</label>
                                             <div class="input-group">
-                                                <input type="password" class="form-control form-control-lg w-full !rounded-e-none" 
-                                                            name="password" 
-                                                            id="password" placeholder="password">
-                                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                                <input type="password" class="form-control form-control-lg w-full !rounded-e-none" name="password"  id="password" placeholder="password">
                                                 <button aria-label="button" type="button" class="ti-btn ti-btn-light !rounded-s-none !mb-0" onclick="createpassword('signup-password',this)" id="button-addon2">
                                                     <i class="ri-eye-off-line align-middle"></i>
                                                 </button>
                                             </div>
+                                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                         </div>
                                         <div class="xl:col-span-12 col-span-12 mb-2">
                                             <label for="signup-confirmpassword" class="form-label text-default">Confirm Password</label>
                                             <div class="input-group">
-                                                <input type="password" class="form-control form-control-lg !rounded-e-none" id="signup-confirmpassword" placeholder="confirm password">
+                                                <x-text-input id="password_confirmation" class="form-control form-control-lg w-full !rounded-e-none"
+                                                                type="password"
+                                                                name="password_confirmation" autocomplete="new-password" />
                                                 <button aria-label="button" type="button" class="ti-btn ti-btn-light !rounded-s-none !mb-0" onclick="createpassword('signup-confirmpassword',this)" id="button-addon21">
                                                     <i class="ri-eye-off-line align-middle"></i>
                                                 </button>
